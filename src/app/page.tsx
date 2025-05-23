@@ -3,11 +3,19 @@ import { useState, useEffect } from "react";
 import MovieSearch from "./components/MovieSearch"; // Componente de búsqueda
 import MovieCatalog from "./components/MovieCatalog"; // Componente de catálogo
 
+export interface Movie {
+  imdbID: string;
+  Title: string;
+  Year: string;
+  Poster: string;
+}
+
+
 export default function Home() {
-  const [movies, setMovies] = useState<any[]>([]); // Estado global de películas
+  const [movies, setMovies] = useState<Movie[]>([]); // Estado global de películas
 
   // Función para actualizar las películas en el estado principal
-  const updateMovies = (newMovies: any[]) => {
+  const updateMovies = (newMovies: Movie[]) => {
     setMovies(newMovies);
   };
 

@@ -1,7 +1,12 @@
 import { useState } from "react";
-
+export interface Movie {
+  imdbID: string;
+  Title: string;
+  Year: string;
+  Poster: string;
+}
 interface MovieSearchProps {
-  updateMovies: (newMovies: any[]) => void; // Recibe la función de actualización como prop
+  updateMovies: (newMovies: Movie[]) => void; // Recibe la función de actualización como prop
 }
 
 const MovieSearch = ({ updateMovies }: MovieSearchProps) => {

@@ -1,5 +1,12 @@
+import Image from "next/image";
+interface Movie {
+  imdbID: string;
+  Title: string;
+  Year: string;
+  Poster: string;
+}
 interface MovieCatalogProps {
-  movies: any[]; // Recibe las películas como props
+  movies: Movie[]; // Recibe las películas como props
 }
 
 const MovieCatalog = ({ movies }: MovieCatalogProps) => {
@@ -11,7 +18,7 @@ const MovieCatalog = ({ movies }: MovieCatalogProps) => {
             key={movie.imdbID}
             className="bg-white rounded-lg shadow-lg overflow-hidden transform transition-transform hover:scale-105 duration-300"
           >
-            <img
+            <Image
               src={movie.Poster}
               alt={movie.Title}
               className="w-full h-80 object-cover rounded-t-lg"
