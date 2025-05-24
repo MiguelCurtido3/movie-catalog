@@ -40,7 +40,7 @@ const MovieSearch = ({ updateMovies }: MovieSearchProps) => {
           type="text"
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
-          className="w-full p-4 pl-12 rounded-lg border-2 border-gray-300 focus:outline-none focus:ring-2 focus:ring-green-500"
+          className="w-full p-4 pl-12 rounded-lg border-2 border-gray-300 text-black focus:outline-none focus:ring-2 focus:ring-green-500"
           placeholder="Buscar película..."
         />
         <svg
